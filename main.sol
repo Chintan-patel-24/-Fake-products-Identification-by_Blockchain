@@ -23,3 +23,14 @@ contract fakeProdDetector {
 
 
     }
+
+  function reportFakeProduct(bytes32 productId) public {
+        require(productList[productId].product_id == 0, "Product not found");
+        productList[productId].isFake = true;
+    }
+
+    function isFakeProduct(bytes32 productId) public view returns (bool) {
+        return productList[productId].isFake;
+    }
+
+}
