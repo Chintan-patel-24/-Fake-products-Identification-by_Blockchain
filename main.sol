@@ -10,3 +10,16 @@ contract fakeProdDetector {
         bool isFake;
         
     }
+
+   function uploadProduct(bytes32 id, string memory name, uint price) public {
+
+        require(productList[id].product_id != 0, "Product found and already Exists");
+            productList[id] = Product({
+            product_id: id,
+            product_name: name,
+            product_price: price,
+            isFake: false
+        });
+
+
+    }
