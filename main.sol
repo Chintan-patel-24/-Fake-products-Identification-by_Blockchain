@@ -21,7 +21,6 @@ contract fakeProdDetector {
             isFake: false
         });
 
-
     }
 
   function reportFakeProduct(bytes32 productId) public {
