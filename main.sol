@@ -31,5 +31,4 @@ contract fakeProdDetector {
     function isFakeProduct(bytes32 productId) public view returns (bool) {
         return productList[productId].isFake;
     }
-
 }
